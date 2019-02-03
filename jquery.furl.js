@@ -13,7 +13,7 @@
         };
     }
     Furl.prototype = {
-        _initFurl: function (target, options) {
+        init: function (target, options) {
             var $this = this;
             options = $.extend({}, $this.defaults, options);
 
@@ -68,7 +68,7 @@
 
     $.fn.furl = function (options) {
         return this.each(function () {
-            $.furl._initFurl(this, options);
+            $.furl.init(this, options);
         });
     };
 })(jQuery);
