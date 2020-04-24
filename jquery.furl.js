@@ -36,6 +36,8 @@
     };
     function urlReplace(url, options) {
         return url.toLowerCase()
+            .replace(/ä/g, 'ae')
+            .replace(/Ä/g, 'ae')
             .replace(/ğ/g, 'g')
             .replace(/ü/g, 'u')
             .replace(/ş/g, 's')
